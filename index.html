@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Interaction</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>API Interaction Example</h1>
+
+        <!-- Buttons -->
+        <div class="button-container">
+            <button id="loadData">Fetch Data with fetch()</button>
+            <button id="xhrLoadData">Fetch Data with XHR</button>
+        </div>
+
+        <!-- Table to display data -->
+        <div id="dataDisplay">
+            <table id="outputTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Title</th>
+                        <th>Body</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Form for POST and PUT requests -->
+        <form id="dataForm">
+            <h3>Send Data</h3>
+            <label for="postTitle">Title:</label>
+            <input type="text" id="postTitle" name="title" required>
+
+            <label for="postBody">Body:</label>
+            <input type="text" id="postBody" name="body" required>
+
+            <label for="postId">Post ID (for PUT):</label>
+            <input type="number" id="postId" name="id" required>
+
+            <button type="submit">Submit Data</button>
+        </form>
+
+        <div class="feedback" id="feedbackMessage"></div>
+    </div>
+
+</body>
+</html>
